@@ -77,4 +77,6 @@ python main.py --fetch-data --ticker AAPL --start-date 2020-01-01 --end-date 202
 
 # Then run a strategy
 python main.py --strategy SMA --short-window 20 --long-window 50 --plot
+
+
   
