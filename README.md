@@ -79,4 +79,16 @@ python main.py --fetch-data --ticker AAPL --start-date 2020-01-01 --end-date 202
 python main.py --strategy SMA --short-window 20 --long-window 50 --plot
 
 
+
+Deployment Instructions
+pip install -r requirements.txt
+chmod +x main.py
+mkdir -p data/raw_data data/processed_data reports visualizations
+# Fetch data first
+python main.py --fetch-data --ticker AAPL --start-date 2020-01-01 --end-date 2023-01-01
+
+# Then run a strategy
+python main.py --strategy SMA --short-window 20 --long-window 50 --plot
+
+
   
