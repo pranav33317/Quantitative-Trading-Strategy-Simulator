@@ -58,4 +58,23 @@ python main.py --strategy MeanReversion --threshold 2.0 --plot
 - Annualized Return
 - Calmar Ratio
 
+
+Deployment Instructions
+
+Install dependencies:
+bash
+pip install -r requirements.txt
+Make the CLI executable:
+bash
+chmod +x main.py
+Create necessary directories:
+bash
+mkdir -p data/raw_data data/processed_data reports visualizations
+Run the simulator:
+bash
+# Fetch data first
+python main.py --fetch-data --ticker AAPL --start-date 2020-01-01 --end-date 2023-01-01
+
+# Then run a strategy
+python main.py --strategy SMA --short-window 20 --long-window 50 --plot
   
